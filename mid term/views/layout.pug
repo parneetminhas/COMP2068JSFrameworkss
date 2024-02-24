@@ -20,3 +20,25 @@ html
         p.lead This is a modified jumbotron that occupies the entire horizontal space of its parent.
     footer.footer
       p 200535778
+      // views/students/read.pug
+
+extends layout
+
+block content
+  h1 Students
+  table.table.table-striped
+    thead
+      tr
+        th Name
+        th Email
+        // Add more table headers as needed
+    tbody
+      //- Loop through students data and populate the table rows
+      each student in students
+        tr
+          td= student.name
+          td= student.email
+          // Add more table cells as needed
+
+  a.btn.btn-primary(href='/students/create') Add New Student
+
