@@ -4,7 +4,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-const any = express();
 
 // Connect to the database
 mongoose.connect(process.env.DB_CONNECTION_STRING, { useNewUrlParser: true, useUnifiedTopology: true })
